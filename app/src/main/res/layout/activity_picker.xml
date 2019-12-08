@@ -8,6 +8,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/pick_image" />
+        android:text="@string/action_pick_image" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

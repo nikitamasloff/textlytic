@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name" translatable="false">textlytic</string>
 
-    <string name="pick_image">Pick an image</string>
-    <string name="take_picture">Take a picture</string>
-    <string name="choose_from_gallery">Choose from gallery</string>
+    <string name="action_pick_image">Pick an image</string>
+    <string name="action_take_picture">Take a picture</string>
+    <string name="action_choose_from_gallery">Choose from gallery</string>
+
+    <string name="notification_camera_absent">Camera is absent on this device</string>
 </resources>
