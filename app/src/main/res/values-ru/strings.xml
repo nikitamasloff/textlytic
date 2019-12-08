@@ -4,4 +4,5 @@
     <string name="action_take_picture">Сделать снимок</string>
     <string name="action_choose_from_gallery">Выбрать из галереи</string>
     <string name="notification_camera_absent">Камера отсутствует на этом устройстве</string>
+    <string name="action_recognize">Распознать</string>
 </resources>

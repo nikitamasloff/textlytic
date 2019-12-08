@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name" translatable="false">textlytic</string>
 
+    <!--PICK region-->
+
     <string name="action_pick_image">Pick an image</string>
     <string name="action_take_picture">Take a picture</string>
     <string name="action_choose_from_gallery">Choose from gallery</string>
 
     <string name="notification_camera_absent">Camera is absent on this device</string>
+
+    <!--end of region-->
+
+
+    <!--PREVIEW region-->
+
+    <string name="action_recognize">Recognize</string>
+
+    <!--end of region-->
+
 </resources>

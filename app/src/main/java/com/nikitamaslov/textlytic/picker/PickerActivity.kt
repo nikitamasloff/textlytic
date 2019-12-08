@@ -20,6 +20,7 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 import android.provider.MediaStore.Images.Media
+import com.nikitamaslov.textlytic.preview.PreviewActivity
 
 private const val REQUEST_CODE_TAKE_PHOTO = 1
 private const val REQUEST_CODE_CHOOSE_FROM_GALLERY = 2
@@ -35,6 +36,12 @@ class PickerActivity : AppCompatActivity() {
         pick_photo_btn.setOnClickListener {
             createPickerDialog().show()
         }
+    }
+
+    private fun launchPreviewActivity(imageUri: Uri) {
+        val intent = Intent(this, PreviewActivity::class.java)
+        intent.putExtra(PreviewActivity.KEY_IMAGE_URI, imageUri.toString())
+        startActivity(intent)
     }
 
     /*
@@ -129,9 +136,7 @@ class PickerActivity : AppCompatActivity() {
             REQUEST_CODE_CHOOSE_FROM_GALLERY -> data!!.data!!
             else -> throw IllegalStateException("Unknown request code")
         }
-        
-        // TODO: send image uri to next activity
-        Toast.makeText(this, imageUri.toString(), Toast.LENGTH_LONG).show()
+        launchPreviewActivity(imageUri)
     }
 
     /*
