@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">textlytic</string>
+    <string name="app_name" translatable="false">textlytic</string>
+
+    <string name="pick_image">Pick an image</string>
+    <string name="take_picture">Take a picture</string>
+    <string name="choose_from_gallery">Choose from gallery</string>
 </resources>
