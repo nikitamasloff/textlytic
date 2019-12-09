@@ -4,6 +4,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.ml.vision.FirebaseVision
 import com.nikitamaslov.textlytic.R
 import com.nikitamaslov.textlytic.util.Response
 import kotlinx.android.synthetic.main.content_recognition.*
@@ -21,6 +22,9 @@ class RecognitionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recognition)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         initActionBar()
         initImageUri()
@@ -43,7 +47,7 @@ class RecognitionActivity : AppCompatActivity() {
     }
 
     private fun initDependencies() {
-        this.recognizer = FakeRecognizer()
+        this.recognizer = FirebaseRecognizer(applicationContext, FirebaseVision.getInstance())
     }
 
     private fun recognize() {
@@ -53,7 +57,6 @@ class RecognitionActivity : AppCompatActivity() {
                 is Response.Failure -> "error"
             }
         }
-        val task = { recognizer.recognize(imageUri, callback) }
-        Handler().postDelayed(task, 5000L)
+        recognizer.recognize(imageUri, callback)
     }
 }
