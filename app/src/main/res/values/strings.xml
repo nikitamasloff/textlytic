@@ -21,6 +21,15 @@
 
     <!--RECOGNITION region-->
 
+    <string name="action_copy_to_clipboard">Copy to clipboard</string>
+    <string name="action_save_to_file">Save to file</string>
+
+    <string name="error_recognition">Recognition error</string>
+    <string name="error_save_to_file">Error saving to file</string>
+
+    <string name="notification_copied_to_clipboard">Copied to clipboard</string>
+    <string name="notification_saved_to_file">Save to file</string>
+
     <!--end of region-->
 
 </resources>

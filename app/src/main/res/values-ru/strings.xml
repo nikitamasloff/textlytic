@@ -5,4 +5,10 @@
     <string name="action_choose_from_gallery">Выбрать из галереи</string>
     <string name="notification_camera_absent">Камера отсутствует на этом устройстве</string>
     <string name="action_recognize">Распознать</string>
+    <string name="action_copy_to_clipboard">Скопировать в буфер клавиатуры</string>
+    <string name="action_save_to_file">Сохранить в файл</string>
+    <string name="error_recognition">Ошибка распознания</string>
+    <string name="error_save_to_file">Ошибка сохранения в файл</string>
+    <string name="notification_copied_to_clipboard">Скопировано в буфер клавиатуры</string>
+    <string name="notification_saved_to_file">Сохранено в файл</string>
 </resources>
