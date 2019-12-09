@@ -12,6 +12,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.widget.Toast
+import com.nikitamaslov.textlytic.di.ServiceLocator
 import java.io.IOException
 import java.io.OutputStreamWriter
 
@@ -63,7 +64,8 @@ class RecognitionActivity : AppCompatActivity() {
     }
 
     private fun initDependencies() {
-        this.recognizer = FirebaseRecognizer(applicationContext, FirebaseVision.getInstance())
+        ServiceLocator.init(this)
+        this.recognizer = ServiceLocator.getRecognizer()
     }
 
     private fun recognize() {
